@@ -1,254 +1,46 @@
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const axios = require('axios');
-const cheerio = require('cheerio');
-
-const app = express();
-const PORT = process.env.PORT || 3000;
-app.enable("trust proxy");
-app.set("json spaces", 2);
-
-// Middleware untuk CORS
-app.use(cors());
-
-// Fungsi untuk ragBot
-async function ragBot(message) {
-  try {
-    const response = await axios.post('https://ragbot-starter.vercel.app/api/chat', {
-      messages: [{ role: 'user', content: message }],
-      useRag: true,
-      llm: 'gpt-3.5-turbo',
-      similarityMetric: 'cosine'
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-// Fungsi untuk degreeGuru
-async function degreeGuru(message, prompt) {
-  try {
-    const response = await axios.post('https://degreeguru.vercel.app/api/guru', {
-      messages: [
-        { role: 'user', content: message }
-      ]
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-// Fungsi untuk pinecone
-async function pinecone(message) {
-  try {
-    const response = await axios.post('https://pinecone-vercel-example.vercel.app/api/chat', {
-      messages: [{ role: 'user', content: message }]
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-// Fungsi untuk smartContract
-async function smartContract(message) {
-  try {
-    const response = await axios.post("https://smart-contract-gpt.vercel.app/api/chat", {
-      messages: [{ content: message, role: "user" }]
-    });
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-async function blackboxAIChat(message) {
-  try {
-    const response = await axios.post('https://www.blackbox.ai/api/chat', {
-      messages: [{ id: null, content: message, role: 'user' }],
-      id: null,
-      previewToken: null,
-      userId: null,
-      codeModelMode: true,
-      agentMode: {},
-      trendingAgentMode: {},
-      isMicMode: false,
-      isChromeExt: false,
-      githubToken: null
-    });
-
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-async function livecharttba() {
-	try {
-    let { data } = await axios.get('https://www.livechart.me/tba/tv');
-    const $ = cheerio.load(data);
-    const Result = [];
-    $('#content > main > article:nth-child(n)').each((i, e) => {
-        const judul = $(e).find('div > h3 > a').text();
-        const image = $(e).find('div > div.poster-container > img').attr('src');
-        const studio = $(e).find('div > div.anime-info > ul > li > a').text();
-        const adaptasi = 'Di adaptasi dari ' + $(e).find('div > div.anime-info > div.anime-metadata > div.anime-source').text();
-        const rilisDate = $(e).find('div > div.poster-container > time').text();
-        const tags = [];
-        $(e).find('div > ol > li:nth-child(n)').each((i, b) => {
-            const a = $(b).find('a').text();
-            tags.push(a);
-        });
-        const linkInfo = $(e).find('div > ul > li:nth-child(2) > a').attr('href');
-        Result.push({
-            judul,
-            tags,
-            image,
-            studio,
-            adaptasi,
-            rilisDate,
-        });
-    });
-    return Result;
-    } catch (error) {
-    throw error;
-  }
-}
-
-// Endpoint untuk servis dokumen HTML
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Endpoint untuk ragBot
-app.get('/api/ragbot', async (req, res) => {
-  try {
-    const message = req.query.message;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mannaxu Api's</title>
+<style>
+[class~=container]{width:100%;}body{font-family:Arial,sans-serif;}[class~=container]{padding-left:15pt;}body{background-color:#f8f9fa;}[class~=container]{padding-bottom:15pt;}[class~=container]{padding-right:15pt;}[class~=container]{padding-top:15pt;}[class~=btn]:hover{background-color:#0056b3;}[class~=container]{background-color:#fff;}body{color:#333;}[class~=container]{border-radius:8px;}[class~=container]{box-shadow:0 0 .625pc rgba(0,0,0,.1);}body{margin-left:0;}body{margin-bottom:0;}body{margin-right:0;}body{margin-top:0;}body,ul{padding-left:0;}body,ul{padding-bottom:0;}[class~=btn-container],h2{margin-top:.208333333in;}body,ul{padding-right:0;}[class~=btn]{display:block;}[class~=btn]{width:calc(100% - 40px);}body,ul{padding-top:0;}h1{color:#007bff;}[class~=btn],h1,h4{text-align:center;}[class~=btn]{margin-left:7.5pt;}[class~=btn]{margin-bottom:7.5pt;}[class~=btn]{margin-right:7.5pt;}[class~=btn]{margin-top:7.5pt;}[class~=btn]{background-color:#007bff;}[class~=btn]{color:#fff;}[class~=btn]{border-left-width:medium;}h2,h4{color:#343a40;}[class~=btn]{border-bottom-width:medium;}[class~=btn]{border-right-width:medium;}[class~=btn]{border-top-width:medium;}[class~=btn]{border-left-style:none;}[class~=btn]{border-bottom-style:none;}[class~=btn]{border-right-style:none;}[class~=btn]{border-top-style:none;}[class~=btn]{border-left-color:currentColor;}[class~=btn]{border-bottom-color:currentColor;}[class~=btn]{border-right-color:currentColor;}[class~=btn]{border-top-color:currentColor;}[class~=btn]{border-image:none;}[class~=btn],pre{padding-left:.104166667in;}[class~=btn],pre{padding-bottom:.104166667in;}pre,[class~=btn]{padding-right:.104166667in;}pre,[class~=btn]{padding-top:.104166667in;}p{line-height:1.6;}[class~=btn]{text-decoration:none;}[class~=btn]{font-size:12pt;}[class~=btn]{border-radius:.208333333in;}p{color:#6c757d;}ul{list-style-type:none;}[class~=btn]{cursor:pointer;}[class~=btn]{transition:background-color .3s ease;}ul{margin-left:0;}ul{margin-bottom:0;}ul{margin-right:0;}ul{margin-top:0;}li{margin-bottom:.104166667in;}pre{background-color:#f0f6ff;}pre{border-radius:3.75pt;}pre{overflow-x:auto;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Manaxu Api's</h1>
+  <p>Welcome to the Manaxu Api's for our service. Below you will find information about the available endpoints and how to use them. I want to tell you something that this rest api was made from start to finish by GPT chat and I think that is very cool</p>
+  
+  <h2>Endpoints</h2>
+  <h4>AI CHAT</h4>
+  <div class="btn-container">
+    <a href="/api/ragbot?message=hello" class="btn">Try /api/ragbot</a>
+    <a href="/api/degreeguru?message=hello" class="btn">Try /api/degreeguru</a>
+    <a href="/api/pinecone?message=hello" class="btn">Try /api/pinecone</a>
+    <a href="/api/smartcontract?message=hello" class="btn">Try /api/smartcontract</a>
+    <a href="/api/blackboxAIChat?message=hello" class="btn">Try /api/blackboxAIChat</a>
+  <h4>ANIME</h4>
+    <a href="/api/ongoing" class="btn">Try /api/ongoing</a>
+  
+  <h2>Usage</h2>
+  <p>To use the endpoints, send a GET request to the desired endpoint with the following query parameter:</p>
+  <ul>
+    <li>message: Your message content</li>
+  </ul>
+  
+  <h2>Response</h2>
+  <p>The response will be in JSON format with the following structure:</p>
+  <pre>
+  {
+    "status": 200,
+    "creator": "MannR",
+    "data": {
+      "response": "Response data here"
     }
-    const response = await ragBot(message);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
   }
-});
-
-// Endpoint untuk degreeGuru
-app.get('/api/degreeguru', async (req, res) => {
-  try {
-    const { message }= req.query;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
-    }
-    const response = await degreeGuru(message);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Endpoint untuk pinecone
-app.get('/api/pinecone', async (req, res) => {
-  try {
-    const message = req.query.message;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
-    }
-    const response = await pinecone(message);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Endpoint untuk smartContract
-app.get('/api/smartcontract', async (req, res) => {
-  try {
-    const message = req.query.message;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
-    }
-    const response = await smartContract(message);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Endpoint untuk blackboxAIChat
-app.get('/api/blackboxAIChat', async (req, res) => {
-  try {
-    const message = req.query.message;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
-    }
-    const response = await blackboxAIChat(message);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Endpoint untuk ongoing
-app.get('/api/ongoing', async (req, res) => {
-  try {
-    const mannr = await livecharttba();
-    const result = mannr.map(item => {
-        return { title: item.judul,
-tags: item.tags.join(', '),
-image: item.image,
-studio: item.studio,
-adaptation: item.adaptasi,
-release_date: item.rilisDate }
-    });
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      result
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.result });
-  }
-});
-
-// Handle 404 error
-app.use((req, res, next) => {
-  res.status(404).send("Sorry can't find that!");
-});
-
-// Handle error
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
-// Jalankan server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-module.exports = app
+  </pre>
+</div>
+</body>
+</html>
