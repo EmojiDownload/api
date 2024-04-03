@@ -461,6 +461,36 @@ release_date: item.rilisDate }
   }
 });
 
+// Endpoint untuk cosplay
+app.get('/api/anime/coplay', async (req, res) => {
+  try {
+  	let list = await axios.get("https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-cosplay.json")
+  	let result = list[Math.floor(list.length * Math.random())]
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk elaina
+app.get('/api/anime/elaina', async (req, res) => {
+  try {
+  	let list = await axios.get("https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-elaina.json")
+  	let result = list[Math.floor(list.length * Math.random())]
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
 // Handle 404 error
 app.use((req, res, next) => {
   res.status(404).send("Sorry can't find that!");
