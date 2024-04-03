@@ -217,10 +217,20 @@ app.get('/api/blackboxAIChat', async (req, res) => {
 app.get('/api/ongoing', async () => {
   try {
     const result = await livecharttba();
+    const formattedResult = result.map(item => {
+        return `
+Title: ${item.judul}
+Tags: ${item.tags.join(', ')}
+Image: ${item.image}
+Studio: ${item.studio}
+Adaptation: ${item.adaptasi}
+Release Date: ${item.rilisDate}
+`;
+    }).join('\n');
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { result }
+      data: { formattedResult }
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
