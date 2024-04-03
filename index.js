@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const { G4F } = require("g4f");
 let g4f = new G4F();
-
+const skrep = require('@bochilteam/scraper')
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
@@ -228,7 +228,7 @@ app.get('/api/ai/blackboxAIChat', async (req, res) => {
   }
 });
 
-// Endpoint untuk ongoing
+// Endpoint untuk gpt4
 app.get('/api/ai/gpt4', async (req, res) => {
   try {
     const message = req.query.message;
@@ -240,6 +240,62 @@ app.get('/api/ai/gpt4', async (req, res) => {
       status: 200,
       creator: "MannR",
       data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk facebook
+app.get('/api/downloader/fbdl', async (req, res, next) => {
+  try {
+    var url = req.query.url
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const result = await skrep.savefrom(url)
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk instagram
+app.get('/api/downloader/igdl', async (req, res, next) => {
+  try {
+    var url = req.query.url
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const dld = await skrep.instagramdl(url).catch(async _ => await skrep.instagramdlv2(url)).catch(async _ => await skrep.instagramdlv3(url)).catch(async _ => await skrep.instagramdlv4(url))
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk tiktok
+app.get('/api/downloader/ttdl', async (req, res, next) => {
+  try {
+    var url = req.query.url
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const dld = await skrep.tiktokdl(url).catch(async _ => await skrep.tiktokdlv2(url))
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
     });
   } catch (error) {
     res.status(500).json({ error: error.result });

@@ -5,7 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mannaxu Api's</title>
 <style>
-[class~=container]{width:100%;}body{font-family:Arial,sans-serif;}[class~=container]{padding-left:15pt;}body{background-color:#f8f9fa;}[class~=container]{padding-bottom:15pt;}[class~=container]{padding-right:15pt;}[class~=container]{padding-top:15pt;}[class~=btn]:hover{background-color:#0056b3;}[class~=container]{background-color:#fff;}body{color:#333;}[class~=container]{border-radius:8px;}[class~=container]{box-shadow:0 0 .625pc rgba(0,0,0,.1);}body{margin-left:0;}body{margin-bottom:0;}body{margin-right:0;}body{margin-top:0;}body,ul{padding-left:0;}body,ul{padding-bottom:0;}[class~=btn-container],h2{margin-top:.208333333in;}body,ul{padding-right:0;}[class~=btn]{display:block;}[class~=btn]{width:calc(100% - 40px);}body,ul{padding-top:0;}h1{color:#007bff;}[class~=btn],h1,h4{text-align:center;}[class~=btn]{margin-left:7.5pt;}[class~=btn]{margin-bottom:7.5pt;}[class~=btn]{margin-right:7.5pt;}[class~=btn]{margin-top:7.5pt;}[class~=btn]{background-color:#007bff;}[class~=btn]{color:#fff;}[class~=btn]{border-left-width:medium;}h2,h4{color:#343a40;}[class~=btn]{border-bottom-width:medium;}[class~=btn]{border-right-width:medium;}[class~=btn]{border-top-width:medium;}[class~=btn]{border-left-style:none;}[class~=btn]{border-bottom-style:none;}[class~=btn]{border-right-style:none;}[class~=btn]{border-top-style:none;}[class~=btn]{border-left-color:currentColor;}[class~=btn]{border-bottom-color:currentColor;}[class~=btn]{border-right-color:currentColor;}[class~=btn]{border-top-color:currentColor;}[class~=btn]{border-image:none;}[class~=btn],pre{padding-left:.104166667in;}[class~=btn],pre{padding-bottom:.104166667in;}pre,[class~=btn]{padding-right:.104166667in;}pre,[class~=btn]{padding-top:.104166667in;}p{line-height:1.6;}[class~=btn]{text-decoration:none;}[class~=btn]{font-size:12pt;}[class~=btn]{border-radius:.208333333in;}p{color:#6c757d;}ul{list-style-type:none;}[class~=btn]{cursor:pointer;}[class~=btn]{transition:background-color .3s ease;}ul{margin-left:0;}ul{margin-bottom:0;}ul{margin-right:0;}ul{margin-top:0;}li{margin-bottom:.104166667in;}pre{background-color:#f0f6ff;}pre{border-radius:3.75pt;}pre{overflow-x:auto;}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #007bff;
+    text-align: center;
+  }
+  h2 {
+    color: #343a40;
+    margin-top: 20px;
+  }
+  h4 {
+    color: #343a40;
+    text-align: center;
+  }
+  p {
+    line-height: 1.6;
+    color: #6c757d;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  pre {
+    background-color: #f0f6ff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  .btn-container {
+    margin-top: 20px;
+  }
+  .btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
 </style>
 </head>
 <body>
@@ -16,14 +80,18 @@
   <h2>Endpoints</h2>
   <h4>AI CHAT</h4>
   <div class="btn-container">
-    <a href="/api/ai/ragbot?message=hello" class="btn">Try /api/ai/ragbot</a>
-    <a href="/api/ai/degreeguru?message=hello" class="btn">Try /api/ai/degreeguru</a>
-    <a href="/api/ai/pinecone?message=hello" class="btn">Try /api/ai/pinecone</a>
-    <a href="/api/ai/smartcontract?message=hello" class="btn">Try /api/ai/smartcontract</a>
-    <a href="/api/ai/blackboxAIChat?message=hello" class="btn">Try /api/ai/blackboxAIChat</a>
-    <a href="/api/ai/gpt4?message=hello" class="btn">Try /api/ai/gpt4</a>
+    <a href="docs/api/ai/ragbot?message=hello" class="btn">Try /api/ai/ragbot</a>
+    <a href="docs/api/ai/degreeguru?message=hello" class="btn">Try /api/ai/degreeguru</a>
+    <a href="docs/api/ai/pinecone?message=hello" class="btn">Try /api/ai/pinecone</a>
+    <a href="docs/api/ai/smartcontract?message=hello" class="btn">Try /api/ai/smartcontract</a>
+    <a href="docs/api/ai/blackboxAIChat?message=hello" class="btn">Try /api/ai/blackboxAIChat</a>
+        <a href="docs/api/ai/gpt4?message=hello" class="btn">Try /api/ai/gpt4</a>
+    <h4>DOWNLOADER</h4>
+        <a href="docs/api/downloader/fbdl?url=" class="btn">Try /api/downloader/fbdl</a>
+        <a href="docs/api/downloader/igdl?url=https://www.instagram.com/p/Cul_Ct3tDGS" class="btn">Try /api/downloader/igdl</a>
+        <a href="docs/api/downloader/ttdl?url=https://vt.tiktok.com/ZSwWCk5o/" class="btn">Try /api/downloader/ttdl</a>
   <h4>ANIME</h4>
-    <a href="/api/anime/ongoing" class="btn">Try /api/anime/ongoing</a>
+    <a href="docs/api/anime/ongoing" class="btn">Try /api/anime/ongoing</a>
   
   <h2>Usage</h2>
   <p>To use the endpoints, send a GET request to the desired endpoint with the following query parameter:</p>
