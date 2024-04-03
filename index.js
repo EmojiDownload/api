@@ -258,7 +258,7 @@ app.get('/api/downloader/fbdl', async (req, res) => {
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      result
+      data: [{ result }]
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
@@ -277,7 +277,7 @@ app.get('/api/downloader/igdl', async (req, res) => {
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      result
+      data: [{ result }]
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
@@ -295,7 +295,7 @@ app.get('/api/downloader/ttdl', async (req, res) => {
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      result
+      data: [{ result }]
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
