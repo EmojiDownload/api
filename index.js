@@ -99,53 +99,6 @@ async function chat(prompt) {
   return  res
 }
 
-// Fungsi untuk igdl
-async function igdl(url) {
-	try {
-            let res = await axios("https://indown.io/");
-            let _$ = cheerio.load(res.data);
-            let referer = _$("input[name=referer]").val();
-            let locale = _$("input[name=locale]").val();
-            let _token = _$("input[name=_token]").val();
-            let { data } = await axios.post(
-              "https://indown.io/download",
-              new URLSearchParams({
-                link: url,
-                referer,
-                locale,
-                _token,
-              }),
-              {
-                headers: {
-                  cookie: res.headers["set-cookie"].join("; "),
-                },
-              }
-            );
-            let $ = cheerio.load(data);
-            let result = [];
-            let __$ = cheerio.load($("#result").html());
-            __$("video").each(function () {
-              let $$ = $(this);
-              result.push({
-                type: "video",
-                thumbnail: $$.attr("poster"),
-                url: $$.find("source").attr("src"),
-              });
-            });
-            __$("img").each(function () {
-              let $$ = $(this);
-              result.push({
-                type: "image",
-                url: $$.attr("src"),
-              });
-            });
-          
-            return result;
-    } catch (error) {
-    throw error;
-  }
-}
-
 // Fungsi untuk ongoing
 async function livecharttba() {
 	try {
@@ -286,25 +239,6 @@ app.get('/api/ai/gpt4', async (req, res) => {
       status: 200,
       creator: "MannR",
       data: { response }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.result });
-  }
-});
-
-// Endpoint untuk instagram
-app.get('/api/downloader/igdl', async (req, res, next) => {
-  try {
-    var url = req.query.url
-    if (!url) {
-      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
-    }
-    const yaya = await igdl(url);
-    const result = yaya[0].url;
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { result }
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
