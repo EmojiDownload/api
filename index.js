@@ -293,24 +293,6 @@ app.get('/api/ai/gpt4', async (req, res) => {
   }
 });
 
-// Endpoint untuk facebook
-app.get('/api/downloader/fbdl', async (req, res, next) => {
-  try {
-    var url = req.query.url
-    if (!url) {
-      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
-    }
-    const result = await skrep.savefrom(url)
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { result }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.result });
-  }
-});
-
 // Endpoint untuk instagram
 app.get('/api/downloader/igdl', async (req, res, next) => {
   try {
@@ -319,25 +301,6 @@ app.get('/api/downloader/igdl', async (req, res, next) => {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
     const result = await igdl(url);
-    res.status(200).json({
-      status: 200,
-      creator: "MannR",
-      data: { result }
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.result });
-  }
-});
-
-// Endpoint untuk tiktok
-app.get('/api/downloader/ttdl', async (req, res, next) => {
-  try {
-    var url = req.query.url
-    if (!url) {
-      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
-    }
-    const dld = await skrep.tiktokdl(url).catch(async _ => await skrep.tiktokdlv2(url))
-    const result = dld;
     res.status(200).json({
       status: 200,
       creator: "MannR",
