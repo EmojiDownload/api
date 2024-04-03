@@ -67,7 +67,6 @@ async function smartContract(message) {
   }
 }
 
-// Fungsi untuk blackboxAIChat
 async function blackboxAIChat(message) {
   try {
     const response = await axios.post('https://www.blackbox.ai/api/chat', {
@@ -89,56 +88,13 @@ async function blackboxAIChat(message) {
   }
 }
 
-// Fungsi untuk GPT4
-async function chat(prompt) {
-  const messages = [
-    { role: "asistant", content: "Kobo Kanaeru adalah bot WhatsApp yang terbuat dari Nodejs. Untuk membantu anda dalam mengerjakan dalam hal apapun. Karakter Kobonaeru adalah periang dan asik, Kobo Kanaeru diciptakan oleh MannHost atau Hyugimura, usia pencipta Kobo Kanaeru adalah 16tahun, dan pencipta Kobo Kanaeru tinggal di Kota Pekanbaru" },
-    { role: "user", content: prompt }
-  ];
-  let res = await g4f.chatCompletion(messages)
-  return  res
-}
-
-// Fungsi untuk ongoing
-async function livecharttba() {
-	try {
-    let { data } = await axios.get('https://www.livechart.me/tba/tv');
-    const $ = cheerio.load(data);
-    const Result = [];
-    $('#content > main > article:nth-child(n)').each((i, e) => {
-        const judul = $(e).find('div > h3 > a').text();
-        const image = $(e).find('div > div.poster-container > img').attr('src');
-        const studio = $(e).find('div > div.anime-info > ul > li > a').text();
-        const adaptasi = 'Di adaptasi dari ' + $(e).find('div > div.anime-info > div.anime-metadata > div.anime-source').text();
-        const rilisDate = $(e).find('div > div.poster-container > time').text();
-        const tags = [];
-        $(e).find('div > ol > li:nth-child(n)').each((i, b) => {
-            const a = $(b).find('a').text();
-            tags.push(a);
-        });
-        const linkInfo = $(e).find('div > ul > li:nth-child(2) > a').attr('href');
-        Result.push({
-            judul,
-            tags,
-            image,
-            studio,
-            adaptasi,
-            rilisDate,
-        });
-    });
-    return Result;
-    } catch (error) {
-    throw error;
-  }
-}
-
 // Endpoint untuk servis dokumen HTML
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Endpoint untuk ragBot
-app.get('/api/ai/ai/ragbot', async (req, res) => {
+app.get('/api/ragbot', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -156,7 +112,7 @@ app.get('/api/ai/ai/ragbot', async (req, res) => {
 });
 
 // Endpoint untuk degreeGuru
-app.get('/api/ai/ai/degreeguru', async (req, res) => {
+app.get('/api/degreeguru', async (req, res) => {
   try {
     const { message }= req.query;
     if (!message) {
@@ -174,7 +130,7 @@ app.get('/api/ai/ai/degreeguru', async (req, res) => {
 });
 
 // Endpoint untuk pinecone
-app.get('/api/ai/pinecone', async (req, res) => {
+app.get('/api/pinecone', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -192,7 +148,7 @@ app.get('/api/ai/pinecone', async (req, res) => {
 });
 
 // Endpoint untuk smartContract
-app.get('/api/ai/smartcontract', async (req, res) => {
+app.get('/api/smartcontract', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -210,7 +166,7 @@ app.get('/api/ai/smartcontract', async (req, res) => {
 });
 
 // Endpoint untuk blackboxAIChat
-app.get('/api/ai/blackboxAIChat', async (req, res) => {
+app.get('/api/blackboxAIChat', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
