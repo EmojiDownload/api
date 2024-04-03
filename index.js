@@ -100,6 +100,63 @@ async function chat(prompt) {
   return  res
 }
 
+// Fungsi untuk AIGPT
+async function aigpt(prompt) {
+  try {
+   const response = await axios.get("https://tools.revesery.com/ai/ai.php?query=" + prompt, {
+     headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.999 Safari/537.36'
+      }
+    });
+    const res = response.data
+    const result = res.result
+    return result
+  } catch (error) {
+  console.error(error)
+  }
+}
+
+// Fungsi untuk ttdl
+async function tiktok(url) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let t = await axios("https://lovetik.com/api/ajax/search", { method: "post", data: new URLSearchParams(Object.entries({ query: url })) });
+
+      const result = {};
+      result.title = clean(t.data.desc);
+      result.author = clean(t.data.author);
+      result.nowm = await shortener((t.data.links[0].a || "").replace("https", "http"));
+      result.watermark = await shortener((t.data.links[1].a || "").replace("https", "http"));
+      result.audio = await shortener((t.data.links[2].a || "").replace("https", "http"));
+      result.thumbnail = await shortener(t.data.cover);
+      
+      resolve(result);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+// Funsi untuk mediafire
+async function mediafire(url) {
+	let res = await axios.get(url)
+	let get = cheerio.load(res.data)
+	let urlFile = get('a#downloadButton').attr('href')
+	let sizeFile = get('a#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('', '')
+	let split = urlFile.split('/')
+	let nameFile = split[5]
+	mime = nameFile.split('.')
+	mime = mime[1]
+	let result = {
+		title: nameFile,
+		size: sizeFile,
+		url: urlFile
+	}
+	return result
+}
+
 // Fungsi untuk ongoing
 async function livecharttba() {
 	try {
@@ -246,6 +303,24 @@ app.get('/api/ai/gpt4', async (req, res) => {
   }
 });
 
+// Endpoint untuk aigpt
+app.get('/api/ai/aigpt', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await aigpt(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
 // Endpoint untuk fbdl
 app.get('/api/downloader/fbdl', async (req, res) => {
   try {
@@ -273,6 +348,44 @@ app.get('/api/downloader/igdl', async (req, res) => {
     }
     var dld = await skrep.instagramdl(url).catch(async _ => await skrep.instagramdlv2(url)).catch(async _ => await skrep.instagramdlv3(url)).catch(async _ => await skrep.instagramdlv4(url))
     const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ttdl
+app.get('/api/downloader/ttdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var dld = await tiktok(url)
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk mediafire
+app.get('/api/downloader/mediafire', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var anu = await mediafire(url)
+    const result = anu;
     res.status(200).json({
       status: 200,
       creator: "MannR",
