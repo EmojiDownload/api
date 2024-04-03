@@ -3,6 +3,9 @@ const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
+const { G4F } = require("g4f");
+let g4f = new G4F();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -65,6 +68,7 @@ async function smartContract(message) {
   }
 }
 
+// Fungsi untuk blackboxAIChat
 async function blackboxAIChat(message) {
   try {
     const response = await axios.post('https://www.blackbox.ai/api/chat', {
@@ -86,6 +90,17 @@ async function blackboxAIChat(message) {
   }
 }
 
+// Fungsi untuk GPT4
+async function chat(prompt) {
+  const messages = [
+    { role: "asistant", content: "Kobo Kanaeru adalah bot WhatsApp yang terbuat dari Nodejs. Untuk membantu anda dalam mengerjakan dalam hal apapun. Karakter Kobonaeru adalah periang dan asik, Kobo Kanaeru diciptakan oleh MannHost atau Hyugimura, usia pencipta Kobo Kanaeru adalah 16tahun, dan pencipta Kobo Kanaeru tinggal di Kota Pekanbaru" },
+    { role: "user", content: prompt }
+  ];
+  let res = await g4f.chatCompletion(messages)
+  return  res
+}
+
+// Fungsi untuk livecharttba
 async function livecharttba() {
 	try {
     let { data } = await axios.get('https://www.livechart.me/tba/tv');
@@ -124,7 +139,7 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint untuk ragBot
-app.get('/api/ragbot', async (req, res) => {
+app.get('/api/ai/ai/ragbot', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -142,7 +157,7 @@ app.get('/api/ragbot', async (req, res) => {
 });
 
 // Endpoint untuk degreeGuru
-app.get('/api/degreeguru', async (req, res) => {
+app.get('/api/ai/ai/degreeguru', async (req, res) => {
   try {
     const { message }= req.query;
     if (!message) {
@@ -160,7 +175,7 @@ app.get('/api/degreeguru', async (req, res) => {
 });
 
 // Endpoint untuk pinecone
-app.get('/api/pinecone', async (req, res) => {
+app.get('/api/ai/pinecone', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -178,7 +193,7 @@ app.get('/api/pinecone', async (req, res) => {
 });
 
 // Endpoint untuk smartContract
-app.get('/api/smartcontract', async (req, res) => {
+app.get('/api/ai/smartcontract', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -196,7 +211,7 @@ app.get('/api/smartcontract', async (req, res) => {
 });
 
 // Endpoint untuk blackboxAIChat
-app.get('/api/blackboxAIChat', async (req, res) => {
+app.get('/api/ai/blackboxAIChat', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -214,7 +229,25 @@ app.get('/api/blackboxAIChat', async (req, res) => {
 });
 
 // Endpoint untuk ongoing
-app.get('/api/ongoing', async (req, res) => {
+app.get('/api/ai/gpt4', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await chat(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ongoing
+app.get('/api/anime/ongoing', async (req, res) => {
   try {
     const mannr = await livecharttba();
     const result = mannr.map(item => {
