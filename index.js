@@ -214,7 +214,7 @@ app.get('/api/blackboxAIChat', async (req, res) => {
 });
 
 // Endpoint untuk ongoing
-app.get('/api/ongoing', async () => {
+app.get('/api/ongoing', async (req, res) => {
   try {
     const result = await livecharttba();
     const formattedResult = result.map(item => {
