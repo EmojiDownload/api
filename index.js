@@ -214,23 +214,21 @@ app.get('/api/blackboxAIChat', async (req, res) => {
 });
 
 // Endpoint untuk ongoing
-app.get('/api/ongoing', async (req, res) => {
+app.get('/api/ongoing', async () => {
   try {
-    const result = await livecharttba();
-    const formattedResult = result.map(item => {
-        return `
-Title: ${item.judul}
-Tags: ${item.tags.join(', ')}
-Image: ${item.image}
-Studio: ${item.studio}
-Adaptation: ${item.adaptasi}
-Release Date: ${item.rilisDate}
-`;
-    }).join('\n');
+    const mannr = await livecharttba();
+    const result = mannr.map(item => {
+        return { title: item.judul,
+tags: item.tags.join(', '),
+image: item.image,
+studio: item.studio,
+adaptation: item.adaptasi,
+release_date: item.rilisDate }
+    });
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { formattedResult }
+      data: { result }
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
