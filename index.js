@@ -4,6 +4,7 @@ const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const fg = require('api-dylux');
 const { G4F } = require("g4f");
 let g4f = new G4F();
 const skrep = require('@bochilteam/scraper')
@@ -257,7 +258,7 @@ app.get('/api/downloader/fbdl', async (req, res) => {
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { result }
+      result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
@@ -276,7 +277,7 @@ app.get('/api/downloader/igdl', async (req, res) => {
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { result }
+      result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
@@ -290,12 +291,11 @@ app.get('/api/downloader/ttdl', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    let dld = await skrep.tiktokdl(url).catch(async _ => await skrep.tiktokdlv2(url))
-    const result = dld;
+    const result = await fg.tiktok(url);
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { result }
+      result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
