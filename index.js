@@ -139,6 +139,7 @@ async function tiktok(url) {
   });
 }
 
+// Fungsi untuk ttdl2
 async function tiktokv2(url) {
     const urls = { url };
     try {
@@ -388,7 +389,7 @@ app.get('/api/downloader/ttdl', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    var dld = await tiktokdl(url)
+    var dld = await tiktok(url)
     const result = dld;
     res.status(200).json({
       status: 200,
@@ -407,7 +408,7 @@ app.get('/api/downloader/ttdlv2', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    var anu = await ttdl(url)
+    var anu = await tiktokv2(url)
     const result = anu;
     res.status(200).json({
       status: 200,
