@@ -6,7 +6,6 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const { G4F } = require("g4f");
 let g4f = new G4F();
-const skrep = require('@bochilteam/scraper')
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
