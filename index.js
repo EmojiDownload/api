@@ -294,7 +294,7 @@ app.get('/api/ai/gpt4', async (req, res) => {
 });
 
 // Endpoint untuk facebook
-app.get('/api/downloader/fbdl', async (req, res) => {
+app.get('/api/downloader/fbdl', async (req, res, next) => {
   try {
     var url = req.query.url
     if (!url) {
@@ -312,7 +312,7 @@ app.get('/api/downloader/fbdl', async (req, res) => {
 });
 
 // Endpoint untuk instagram
-app.get('/api/downloader/igdl', async (req, res) => {
+app.get('/api/downloader/igdl', async (req, res, next) => {
   try {
     var url = req.query.url
     if (!url) {
@@ -330,7 +330,7 @@ app.get('/api/downloader/igdl', async (req, res) => {
 });
 
 // Endpoint untuk tiktok
-app.get('/api/downloader/ttdl', async (req, res) => {
+app.get('/api/downloader/ttdl', async (req, res, next) => {
   try {
     var url = req.query.url
     if (!url) {
