@@ -469,7 +469,7 @@ app.get('/api/anime/coplay', async (req, res) => {
   	res.status(200).json({
       status: 200,
       creator: "MannR",
-      result
+      result: result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
@@ -484,7 +484,7 @@ app.get('/api/anime/elaina', async (req, res) => {
   	res.status(200).json({
       status: 200,
       creator: "MannR",
-      result
+      result: result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
