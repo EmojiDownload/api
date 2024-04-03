@@ -299,7 +299,8 @@ app.get('/api/downloader/igdl', async (req, res, next) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    const result = await igdl(url);
+    const yaya = await igdl(url);
+    const result = yaya[0].url;
     res.status(200).json({
       status: 200,
       creator: "MannR",
