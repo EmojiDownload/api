@@ -228,7 +228,7 @@ release_date: item.rilisDate }
     res.status(200).json({
       status: 200,
       creator: "MannR",
-      data: { result }
+      result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
