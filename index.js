@@ -6,6 +6,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const { G4F } = require("g4f");
 let g4f = new G4F();
+const skrep = require('@bochilteam/scraper')
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
@@ -67,6 +68,7 @@ async function smartContract(message) {
   }
 }
 
+// Fungsi untuk blackboxAIChat
 async function blackboxAIChat(message) {
   try {
     const response = await axios.post('https://www.blackbox.ai/api/chat', {
@@ -88,13 +90,56 @@ async function blackboxAIChat(message) {
   }
 }
 
+// Fungsi untuk GPT4
+async function chat(prompt) {
+  const messages = [
+    { role: "asistant", content: "Kobo Kanaeru adalah bot WhatsApp yang terbuat dari Nodejs. Untuk membantu anda dalam mengerjakan dalam hal apapun. Karakter Kobonaeru adalah periang dan asik, Kobo Kanaeru diciptakan oleh MannHost atau Hyugimura, usia pencipta Kobo Kanaeru adalah 16tahun, dan pencipta Kobo Kanaeru tinggal di Kota Pekanbaru" },
+    { role: "user", content: prompt }
+  ];
+  let res = await g4f.chatCompletion(messages)
+  return  res
+}
+
+// Fungsi untuk ongoing
+async function livecharttba() {
+	try {
+    let { data } = await axios.get('https://www.livechart.me/tba/tv');
+    const $ = cheerio.load(data);
+    const Result = [];
+    $('#content > main > article:nth-child(n)').each((i, e) => {
+        const judul = $(e).find('div > h3 > a').text();
+        const image = $(e).find('div > div.poster-container > img').attr('src');
+        const studio = $(e).find('div > div.anime-info > ul > li > a').text();
+        const adaptasi = 'Di adaptasi dari ' + $(e).find('div > div.anime-info > div.anime-metadata > div.anime-source').text();
+        const rilisDate = $(e).find('div > div.poster-container > time').text();
+        const tags = [];
+        $(e).find('div > ol > li:nth-child(n)').each((i, b) => {
+            const a = $(b).find('a').text();
+            tags.push(a);
+        });
+        const linkInfo = $(e).find('div > ul > li:nth-child(2) > a').attr('href');
+        Result.push({
+            judul,
+            tags,
+            image,
+            studio,
+            adaptasi,
+            rilisDate,
+        });
+    });
+    return Result;
+    } catch (error) {
+    throw error;
+  }
+}
+
 // Endpoint untuk servis dokumen HTML
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Endpoint untuk ragBot
-app.get('/api/ragbot', async (req, res) => {
+app.get('/api/ai/ragbot', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -112,7 +157,7 @@ app.get('/api/ragbot', async (req, res) => {
 });
 
 // Endpoint untuk degreeGuru
-app.get('/api/degreeguru', async (req, res) => {
+app.get('/api/ai/degreeguru', async (req, res) => {
   try {
     const { message }= req.query;
     if (!message) {
@@ -130,7 +175,7 @@ app.get('/api/degreeguru', async (req, res) => {
 });
 
 // Endpoint untuk pinecone
-app.get('/api/pinecone', async (req, res) => {
+app.get('/api/ai/pinecone', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -148,7 +193,7 @@ app.get('/api/pinecone', async (req, res) => {
 });
 
 // Endpoint untuk smartContract
-app.get('/api/smartcontract', async (req, res) => {
+app.get('/api/ai/smartcontract', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -166,7 +211,7 @@ app.get('/api/smartcontract', async (req, res) => {
 });
 
 // Endpoint untuk blackboxAIChat
-app.get('/api/blackboxAIChat', async (req, res) => {
+app.get('/api/ai/blackboxAIChat', async (req, res) => {
   try {
     const message = req.query.message;
     if (!message) {
@@ -195,6 +240,62 @@ app.get('/api/ai/gpt4', async (req, res) => {
       status: 200,
       creator: "MannR",
       data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk fbdl
+app.get('/api/downloader/fbdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const result = await skrep.savefrom(url);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk igdl
+app.get('/api/downloader/igdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var dld = await skrep.instagramdl(url).catch(async _ => await skrep.instagramdlv2(url)).catch(async _ => await skrep.instagramdlv3(url)).catch(async _ => await skrep.instagramdlv4(url))
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ttdl
+app.get('/api/downloader/ttdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    let dld = await skrep.tiktokdl(url).catch(async _ => await skrep.tiktokdlv2(url))
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
