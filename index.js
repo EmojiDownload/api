@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
+const cheerio = require('cheerio');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -81,6 +82,38 @@ async function blackboxAIChat(message) {
 
     return response.data;
   } catch (error) {
+    throw error;
+  }
+}
+
+async function livecharttba() {
+	try {
+    let { data } = await axios.get('https://www.livechart.me/tba/tv');
+    const $ = cheerio.load(data);
+    const Result = [];
+    $('#content > main > article:nth-child(n)').each((i, e) => {
+        const judul = $(e).find('div > h3 > a').text();
+        const image = $(e).find('div > div.poster-container > img').attr('src');
+        const studio = $(e).find('div > div.anime-info > ul > li > a').text();
+        const adaptasi = 'Di adaptasi dari ' + $(e).find('div > div.anime-info > div.anime-metadata > div.anime-source').text();
+        const rilisDate = $(e).find('div > div.poster-container > time').text();
+        const tags = [];
+        $(e).find('div > ol > li:nth-child(n)').each((i, b) => {
+            const a = $(b).find('a').text();
+            tags.push(a);
+        });
+        const linkInfo = $(e).find('div > ul > li:nth-child(2) > a').attr('href');
+        Result.push({
+            judul,
+            tags,
+            image,
+            studio,
+            adaptasi,
+            rilisDate,
+        });
+    });
+    return Result;
+    } catch (error) {
     throw error;
   }
 }
@@ -177,6 +210,20 @@ app.get('/api/blackboxAIChat', async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk ongoing
+app.get('/api/ongoing', async () => {
+  try {
+    const result = await livecharttba();
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { result }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
   }
 });
 
