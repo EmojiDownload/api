@@ -148,7 +148,7 @@ async function aigpt(prompt) {
   }
 }
 
-// Fungsi untuk tiktok
+// Fungsi untuk ttdl
 async function tiktok(url) {
   return new Promise(async (resolve, reject) => {
     try {
