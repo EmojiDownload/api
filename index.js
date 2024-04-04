@@ -180,8 +180,7 @@ async function tiktokv2(url) {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36',
             }
         });
-        const data = response.data;
-        const result = { data }
+        const result = response.data
 
         console.log(result);
         return result;
