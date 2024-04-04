@@ -71,7 +71,7 @@ async function smartContract(message) {
 }
 
 // Fungsi untuk blackboxAIChat
-async function blackboxAiChat(content) {
+async function blackboxAIChat(content) {
     const url = "https://www.blackbox.ai/api/chat"
     const headers = {
         "Accept": "*/*",
