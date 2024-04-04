@@ -419,8 +419,7 @@ app.get('/api/downloader/ttdl', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    var dld = await tiktok(url)
-    const result = dld;
+    const result = await tiktok(url)
     res.status(200).json({
       status: 200,
       creator: "MannR",
@@ -438,8 +437,7 @@ app.get('/api/downloader/ttdlv2', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    var anu = await tiktokv2(url)
-    const result = anu;
+    const result = await tiktokv2(url)
     res.status(200).json({
       status: 200,
       creator: "MannR",
