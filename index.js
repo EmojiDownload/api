@@ -181,9 +181,7 @@ async function tiktokv2(url) {
             }
         });
         const data = response.data;
-        const result = {
-            data: data,
-        };
+        const result = { data }
 
         console.log(result);
         return result;
