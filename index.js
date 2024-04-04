@@ -1,1 +1,566 @@
-function _0x45f8(_0x168e8e,_0x3cd706){const _0x5634ec=_0x46e6();return _0x45f8=function(_0xed3f94,_0x21d4ef){_0xed3f94=_0xed3f94-0x1da;let _0x42cdff=_0x5634ec[_0xed3f94];return _0x42cdff;},_0x45f8(_0x168e8e,_0x3cd706);}function _0x46e6(){const _0x106137=['https://degreeguru.vercel.app/api/guru','trace','stack','Download','text','*/*','Di\x20adaptasi\x20dari\x20','user','listen','thumbnail','catch','express','/api/ai/aigpt','sendFile','author','div\x20>\x20div.anime-info\x20>\x20ul\x20>\x20li\x20>\x20a','div\x20>\x20h3\x20>\x20a','cosine','10839798WYaJLz','constructor','result','/api/internet/google','exception','13620496VhEGcU','apply','Mozilla/5.0\x20(Linux;\x20Android\x2010;\x20K)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/118.0.0.0\x20Mobile\x20Safari/537.36','7UhtGzR','prototype','a#downloadButton','@bochilteam/scraper','replace','stringify','asistant','env','Sorry\x20can\x27t\x20find\x20that!','savefrom','console','https://www.blackbox.ai/api/chat','https://www.livechart.me/tba/tv','https://www.blackbox.ai/','src','31592169JrTqgv','https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-elaina.json','get','https://lovetik.com/api/ajax/search','message','load','www.blackbox.ai','90939IuXLYG','/api/ai/pinecone','push','https','exports','warn','judul','chatCompletion','send','{}.constructor(\x22return\x20this\x22)(\x20)','find','instagramdl','instagramdlv3','json','https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-cosplay.json','attr','PORT','1486938yGoqOG','MannR','toString','(((.+)+)+)+$','cheerio','map','rilisDate','adaptasi','error','info','application/json','/api/ai/smartcontract','enable','path','title','floor','/api/ai/blackboxAIChat','156564onXBdv','https://ragbot-starter.vercel.app/api/chat','node-fetch','Something\x20broke!','http','#content\x20>\x20main\x20>\x20article:nth-child(n)','search','status','link','22ZWVpKy','links','google-it','bind','Parameter\x20\x22message\x22\x20tidak\x20ditemukan','query','https://pinecone-vercel-example.vercel.app/api/chat','instagramdlv4','/api/downloader/ttdl','watermark','https://tools.revesery.com/ai/ai.php?query=','data','POST','g4f','length','id-ID,en;q=0.5','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/99.0.9999.999\x20Safari/537.36','post','desc','Kobo\x20Kanaeru\x20adalah\x20bot\x20WhatsApp\x20yang\x20terbuat\x20dari\x20Nodejs.\x20Untuk\x20membantu\x20anda\x20dalam\x20mengerjakan\x20dalam\x20hal\x20apapun.\x20Karakter\x20Kobonaeru\x20adalah\x20periang\x20dan\x20asik,\x20Kobo\x20Kanaeru\x20diciptakan\x20oleh\x20MannHost\x20atau\x20Hyugimura,\x20usia\x20pencipta\x20Kobo\x20Kanaeru\x20adalah\x2016tahun,\x20dan\x20pencipta\x20Kobo\x20Kanaeru\x20tinggal\x20di\x20Kota\x20Pekanbaru','random','tags','7261200wIaTsA','use','url','/api/downloader/ttdlv2','json\x20spaces','div\x20>\x20div.anime-info\x20>\x20div.anime-metadata\x20>\x20div.anime-source','div\x20>\x20div.poster-container\x20>\x20img','https://google.com/search?q=','cover','/api/anime/ongoing','snippet','Parameter\x20\x22url\x22\x20tidak\x20ditemukan','href','nowm','audio','join','chat-free','/api/anime/cosplay','/api/anime/elaina','index.html','each','log'];_0x46e6=function(){return _0x106137;};return _0x46e6();}const _0x44d677=_0x45f8;(function(_0x39cb03,_0x195210){const _0x1fff8a=_0x45f8,_0x541f78=_0x39cb03();while(!![]){try{const _0x2fc1e8=parseInt(_0x1fff8a(0x200))/0x1*(-parseInt(_0x1fff8a(0x22b))/0x2)+parseInt(_0x1fff8a(0x211))/0x3+-parseInt(_0x1fff8a(0x222))/0x4+parseInt(_0x1fff8a(0x241))/0x5+parseInt(_0x1fff8a(0x1e2))/0x6*(-parseInt(_0x1fff8a(0x1ea))/0x7)+-parseInt(_0x1fff8a(0x1e7))/0x8+parseInt(_0x1fff8a(0x1f9))/0x9;if(_0x2fc1e8===_0x195210)break;else _0x541f78['push'](_0x541f78['shift']());}catch(_0x1e8d28){_0x541f78['push'](_0x541f78['shift']());}}}(_0x46e6,0xde096));const _0x1b08db=(function(){let _0x5a8af0=!![];return function(_0x1b9068,_0x323ea8){const _0x469296=_0x5a8af0?function(){if(_0x323ea8){const _0x3b2e29=_0x323ea8['apply'](_0x1b9068,arguments);return _0x323ea8=null,_0x3b2e29;}}:function(){};return _0x5a8af0=![],_0x469296;};}()),_0x462254=_0x1b08db(this,function(){const _0x1e352a=_0x45f8;return _0x462254['toString']()[_0x1e352a(0x228)](_0x1e352a(0x214))[_0x1e352a(0x213)]()[_0x1e352a(0x1e3)](_0x462254)[_0x1e352a(0x228)](_0x1e352a(0x214));});_0x462254();const _0x21d4ef=(function(){let _0xb0e54b=!![];return function(_0x9a9e17,_0x5605ab){const _0x5e3a86=_0xb0e54b?function(){const _0x131c9a=_0x45f8;if(_0x5605ab){const _0x4514aa=_0x5605ab[_0x131c9a(0x1e8)](_0x9a9e17,arguments);return _0x5605ab=null,_0x4514aa;}}:function(){};return _0xb0e54b=![],_0x5e3a86;};}()),_0xed3f94=_0x21d4ef(this,function(){const _0x64fbb0=_0x45f8,_0xeda6bc=function(){const _0x1b0a3a=_0x45f8;let _0x480a22;try{_0x480a22=Function('return\x20(function()\x20'+_0x1b0a3a(0x209)+');')();}catch(_0x31565d){_0x480a22=window;}return _0x480a22;},_0x1c5c8d=_0xeda6bc(),_0x405135=_0x1c5c8d[_0x64fbb0(0x1f4)]=_0x1c5c8d[_0x64fbb0(0x1f4)]||{},_0x3b8a7b=[_0x64fbb0(0x256),_0x64fbb0(0x205),_0x64fbb0(0x21a),_0x64fbb0(0x219),_0x64fbb0(0x1e6),'table',_0x64fbb0(0x258)];for(let _0x517a79=0x0;_0x517a79<_0x3b8a7b[_0x64fbb0(0x239)];_0x517a79++){const _0x580b57=_0x21d4ef[_0x64fbb0(0x1e3)][_0x64fbb0(0x1eb)][_0x64fbb0(0x22e)](_0x21d4ef),_0x592819=_0x3b8a7b[_0x517a79],_0x3e2955=_0x405135[_0x592819]||_0x580b57;_0x580b57['__proto__']=_0x21d4ef[_0x64fbb0(0x22e)](_0x21d4ef),_0x580b57[_0x64fbb0(0x213)]=_0x3e2955[_0x64fbb0(0x213)][_0x64fbb0(0x22e)](_0x3e2955),_0x405135[_0x592819]=_0x580b57;}});_0xed3f94();const express=require(_0x44d677(0x1db)),cors=require('cors'),path=require(_0x44d677(0x21e)),axios=require('axios'),fetch=require(_0x44d677(0x224)),cheerio=require(_0x44d677(0x215)),fs=require('fs'),googleIt=require(_0x44d677(0x22d)),{G4F}=require(_0x44d677(0x238));let g4f=new G4F();const skrep=require(_0x44d677(0x1ed)),app=express(),PORT=process[_0x44d677(0x1f1)][_0x44d677(0x210)]||0xbb8;app[_0x44d677(0x21d)]('trust\x20proxy'),app['set'](_0x44d677(0x245),0x2),app['use'](cors());async function ragBot(_0x31b4bd){const _0x3d69c4=_0x44d677;try{const _0x41a392=await axios[_0x3d69c4(0x23c)](_0x3d69c4(0x223),{'messages':[{'role':'user','content':_0x31b4bd}],'useRag':!![],'llm':'gpt-3.5-turbo','similarityMetric':_0x3d69c4(0x1e1)});return _0x41a392['data'];}catch(_0x44f1cd){throw _0x44f1cd;}}async function degreeGuru(_0x304f34,_0x4a42a2){const _0x158b87=_0x44d677;try{const _0x296778=await axios['post'](_0x158b87(0x257),{'messages':[{'role':_0x158b87(0x25e),'content':_0x304f34}]});return _0x296778[_0x158b87(0x236)];}catch(_0x466fff){throw _0x466fff;}}async function pinecone(_0x4cc87a){const _0x476d2a=_0x44d677;try{const _0xd68568=await axios[_0x476d2a(0x23c)](_0x476d2a(0x231),{'messages':[{'role':_0x476d2a(0x25e),'content':_0x4cc87a}]});return _0xd68568[_0x476d2a(0x236)];}catch(_0x43535f){throw _0x43535f;}}async function smartContract(_0x4c3fc3){const _0x441985=_0x44d677;try{const _0x2d5bdf=await axios[_0x441985(0x23c)]('https://smart-contract-gpt.vercel.app/api/chat',{'messages':[{'content':_0x4c3fc3,'role':_0x441985(0x25e)}]});return _0x2d5bdf[_0x441985(0x236)];}catch(_0x4cbc8f){throw _0x4cbc8f;}}async function blackboxAIChat(_0x1f2f65){const _0x2b3ddc=_0x44d677,_0x4744e1=_0x2b3ddc(0x1f5),_0x461dd={'Accept':_0x2b3ddc(0x25c),'Accept-Language':_0x2b3ddc(0x23a),'Referer':_0x2b3ddc(0x1f7),'Content-Type':_0x2b3ddc(0x21b),'Origin':'https://www.blackbox.ai','Alt-Used':_0x2b3ddc(0x1ff)},_0x2c6a94={'messages':[{'role':_0x2b3ddc(0x25e),'content':_0x1f2f65}],'id':_0x2b3ddc(0x251),'previewToken':null,'userId':'','codeModelMode':!![],'agentMode':{},'trendingAgentMode':{},'isMicMode':![],'userSystemPrompt':'You\x20are\x20Dark\x20Box,\x20a\x20useful\x20AI\x20Model\x20for\x20millions\x20of\x20developers\x20using\x20Blackbox\x20Code\x20Chat\x20that\x20will\x20answer\x20coding\x20questions\x20and\x20help\x20them\x20when\x20writing\x20code.','maxTokens':0x400,'webSearchMode':![],'promptUrls':'','isChromeExt':![],'githubToken':null};try{const _0x250de6=await fetch(_0x4744e1,{'method':_0x2b3ddc(0x237),'headers':_0x461dd,'body':JSON[_0x2b3ddc(0x1ef)](_0x2c6a94)}),_0x24ee8c=await _0x250de6['text']();return _0x24ee8c;}catch(_0x5c4b2b){throw _0x5c4b2b;}}async function chat(_0x16caec){const _0x54842b=_0x44d677;try{const _0x5f230f=[{'role':_0x54842b(0x1f0),'content':_0x54842b(0x23e)},{'role':'user','content':_0x16caec}];let _0x47c4c8=await g4f[_0x54842b(0x207)](_0x5f230f);return _0x47c4c8;}catch(_0xf9e9ec){throw _0xf9e9ec;}}async function aigpt(_0x4b9bfa){const _0x5ee62b=_0x44d677;try{const _0xac9d82=await axios[_0x5ee62b(0x1fb)](_0x5ee62b(0x235)+_0x4b9bfa,{'headers':{'Accept':_0x5ee62b(0x25c),'Content-Type':'application/json','User-Agent':_0x5ee62b(0x23b)}}),_0x3ba20f=_0xac9d82[_0x5ee62b(0x236)],_0x48d572=_0x3ba20f['result'];return _0x48d572;}catch(_0x4d14f3){console[_0x5ee62b(0x219)](_0x4d14f3);}}async function tiktok(_0x4577e0){return new Promise(async(_0x5a931d,_0x16792b)=>{const _0x1c85a7=_0x45f8;try{let _0x23ad80=await axios(_0x1c85a7(0x1fc),{'method':_0x1c85a7(0x23c),'data':new URLSearchParams(Object['entries']({'query':_0x4577e0}))});const _0x4c773b={};_0x4c773b[_0x1c85a7(0x21f)]=clean(_0x23ad80['data'][_0x1c85a7(0x23d)]),_0x4c773b[_0x1c85a7(0x1de)]=clean(_0x23ad80[_0x1c85a7(0x236)][_0x1c85a7(0x1de)]),_0x4c773b[_0x1c85a7(0x24e)]=await shortener((_0x23ad80[_0x1c85a7(0x236)][_0x1c85a7(0x22c)][0x0]['a']||'')[_0x1c85a7(0x1ee)]('https','http')),_0x4c773b[_0x1c85a7(0x234)]=await shortener((_0x23ad80[_0x1c85a7(0x236)][_0x1c85a7(0x22c)][0x1]['a']||'')[_0x1c85a7(0x1ee)](_0x1c85a7(0x203),_0x1c85a7(0x226))),_0x4c773b[_0x1c85a7(0x24f)]=await shortener((_0x23ad80['data']['links'][0x2]['a']||'')['replace']('https','http')),_0x4c773b[_0x1c85a7(0x260)]=await shortener(_0x23ad80[_0x1c85a7(0x236)][_0x1c85a7(0x249)]),_0x5a931d(_0x4c773b);}catch(_0x52120d){_0x16792b(_0x52120d);}});}async function tiktokv2(_0x2e86b1){const _0x42b229=_0x44d677,_0x47c361={'url':_0x2e86b1};try{const _0x2bcbc5=await axios[_0x42b229(0x23c)]('https://ssstiktokio.com/wp-json/aio-dl/video-data/',_0x47c361,{'headers':{'Accept':_0x42b229(0x25c),'Content-Type':_0x42b229(0x21b),'User-Agent':_0x42b229(0x1e9)}}),_0x101a52=_0x2bcbc5['data'],_0x14c7f9={'data':_0x101a52};return console[_0x42b229(0x256)](_0x14c7f9),_0x14c7f9;}catch(_0x4979cc){return console[_0x42b229(0x219)](_0x4979cc),_0x4979cc['message'];}}async function mediafire(_0x2c5690){const _0x402514=_0x44d677;let _0x57bb40=await axios[_0x402514(0x1fb)](_0x2c5690),_0x53ac7a=cheerio[_0x402514(0x1fe)](_0x57bb40[_0x402514(0x236)]),_0x22d2d7=_0x53ac7a(_0x402514(0x1ec))[_0x402514(0x20f)](_0x402514(0x24d)),_0x3ad51b=_0x53ac7a(_0x402514(0x1ec))[_0x402514(0x25b)]()['replace'](_0x402514(0x25a),'')[_0x402514(0x1ee)]('(','')[_0x402514(0x1ee)](')','')['replace']('\x0a','')['replace']('\x0a','')['replace']('',''),_0x5d610b=_0x22d2d7['split']('/'),_0x5d2f7d=_0x5d610b[0x5];mime=_0x5d2f7d['split']('.'),mime=mime[0x1];let _0x5dd025={'title':_0x5d2f7d,'size':_0x3ad51b,'url':_0x22d2d7};return _0x5dd025;}async function livecharttba(){const _0x48d3b8=_0x44d677;try{let {data:_0xe0878b}=await axios['get'](_0x48d3b8(0x1f6));const _0x59f857=cheerio[_0x48d3b8(0x1fe)](_0xe0878b),_0x4bf47d=[];return _0x59f857(_0x48d3b8(0x227))['each']((_0x43070c,_0x5f47de)=>{const _0xa09232=_0x48d3b8,_0x2f6c4f=_0x59f857(_0x5f47de)[_0xa09232(0x20a)](_0xa09232(0x1e0))['text'](),_0x4044f0=_0x59f857(_0x5f47de)[_0xa09232(0x20a)](_0xa09232(0x247))[_0xa09232(0x20f)](_0xa09232(0x1f8)),_0x485fe1=_0x59f857(_0x5f47de)[_0xa09232(0x20a)](_0xa09232(0x1df))[_0xa09232(0x25b)](),_0x338b75=_0xa09232(0x25d)+_0x59f857(_0x5f47de)[_0xa09232(0x20a)](_0xa09232(0x246))[_0xa09232(0x25b)](),_0x2b4dfb=_0x59f857(_0x5f47de)['find']('div\x20>\x20div.poster-container\x20>\x20time')[_0xa09232(0x25b)](),_0x56c397=[];_0x59f857(_0x5f47de)[_0xa09232(0x20a)]('div\x20>\x20ol\x20>\x20li:nth-child(n)')[_0xa09232(0x255)]((_0x51ef59,_0x467ad7)=>{const _0x48e839=_0xa09232,_0x35d988=_0x59f857(_0x467ad7)['find']('a')['text']();_0x56c397[_0x48e839(0x202)](_0x35d988);});const _0x1b65ff=_0x59f857(_0x5f47de)[_0xa09232(0x20a)]('div\x20>\x20ul\x20>\x20li:nth-child(2)\x20>\x20a')['attr'](_0xa09232(0x24d));_0x4bf47d[_0xa09232(0x202)]({'judul':_0x2f6c4f,'tags':_0x56c397,'image':_0x4044f0,'studio':_0x485fe1,'adaptasi':_0x338b75,'rilisDate':_0x2b4dfb});}),_0x4bf47d;}catch(_0x1ae5ee){throw _0x1ae5ee;}}app[_0x44d677(0x1fb)]('/',(_0x6e68e,_0x5d9428)=>{const _0x32d186=_0x44d677;_0x5d9428[_0x32d186(0x1dd)](path[_0x32d186(0x250)](__dirname,_0x32d186(0x254)));}),app['get']('/api/ai/ragbot',async(_0x32b9a1,_0x4d5980)=>{const _0x23827e=_0x44d677;try{const _0x4dfa6c=_0x32b9a1[_0x23827e(0x230)][_0x23827e(0x1fd)];if(!_0x4dfa6c)return _0x4d5980[_0x23827e(0x229)](0x190)[_0x23827e(0x20d)]({'error':_0x23827e(0x22f)});const _0x145418=await ragBot(_0x4dfa6c);_0x4d5980['status'](0xc8)[_0x23827e(0x20d)]({'status':0xc8,'creator':_0x23827e(0x212),'data':{'response':_0x145418}});}catch(_0x2f694f){_0x4d5980[_0x23827e(0x229)](0x1f4)[_0x23827e(0x20d)]({'error':_0x2f694f['message']});}}),app[_0x44d677(0x1fb)]('/api/ai/degreeguru',async(_0x1ecad4,_0x1078e3)=>{const _0x3bfb0b=_0x44d677;try{const {message:_0x58afe1}=_0x1ecad4['query'];if(!_0x58afe1)return _0x1078e3[_0x3bfb0b(0x229)](0x190)[_0x3bfb0b(0x20d)]({'error':_0x3bfb0b(0x22f)});const _0x1b7484=await degreeGuru(_0x58afe1);_0x1078e3[_0x3bfb0b(0x229)](0xc8)[_0x3bfb0b(0x20d)]({'status':0xc8,'creator':_0x3bfb0b(0x212),'data':{'response':_0x1b7484}});}catch(_0x5d1e07){_0x1078e3[_0x3bfb0b(0x229)](0x1f4)[_0x3bfb0b(0x20d)]({'error':_0x5d1e07['message']});}}),app[_0x44d677(0x1fb)](_0x44d677(0x201),async(_0x48cc40,_0x4142a1)=>{const _0x44cdd2=_0x44d677;try{const _0x3cc506=_0x48cc40[_0x44cdd2(0x230)][_0x44cdd2(0x1fd)];if(!_0x3cc506)return _0x4142a1[_0x44cdd2(0x229)](0x190)['json']({'error':'Parameter\x20\x22message\x22\x20tidak\x20ditemukan'});const _0x1aa43e=await pinecone(_0x3cc506);_0x4142a1[_0x44cdd2(0x229)](0xc8)[_0x44cdd2(0x20d)]({'status':0xc8,'creator':_0x44cdd2(0x212),'data':{'response':_0x1aa43e}});}catch(_0x1e17c2){_0x4142a1[_0x44cdd2(0x229)](0x1f4)[_0x44cdd2(0x20d)]({'error':_0x1e17c2[_0x44cdd2(0x1fd)]});}}),app['get'](_0x44d677(0x21c),async(_0x2f5bea,_0x5a7222)=>{const _0x445c15=_0x44d677;try{const _0x8bf2da=_0x2f5bea[_0x445c15(0x230)][_0x445c15(0x1fd)];if(!_0x8bf2da)return _0x5a7222['status'](0x190)[_0x445c15(0x20d)]({'error':_0x445c15(0x22f)});const _0x4b0867=await smartContract(_0x8bf2da);_0x5a7222[_0x445c15(0x229)](0xc8)['json']({'status':0xc8,'creator':_0x445c15(0x212),'data':{'response':_0x4b0867}});}catch(_0x2b9f0d){_0x5a7222[_0x445c15(0x229)](0x1f4)[_0x445c15(0x20d)]({'error':_0x2b9f0d[_0x445c15(0x1fd)]});}}),app[_0x44d677(0x1fb)](_0x44d677(0x221),async(_0x42da73,_0x2eac8e)=>{const _0x2f214a=_0x44d677;try{const _0x2b81bc=_0x42da73[_0x2f214a(0x230)][_0x2f214a(0x1fd)];if(!_0x2b81bc)return _0x2eac8e[_0x2f214a(0x229)](0x190)['json']({'error':_0x2f214a(0x22f)});const _0x89496d=await blackboxAIChat(_0x2b81bc);_0x2eac8e[_0x2f214a(0x229)](0xc8)[_0x2f214a(0x20d)]({'status':0xc8,'creator':_0x2f214a(0x212),'data':{'response':_0x89496d}});}catch(_0x19e435){_0x2eac8e[_0x2f214a(0x229)](0x1f4)[_0x2f214a(0x20d)]({'error':_0x19e435['message']});}}),app[_0x44d677(0x1fb)]('/api/ai/gpt4',async(_0x1d6ece,_0x5f0fc5)=>{const _0x3a2b24=_0x44d677;try{const _0x350c5b=_0x1d6ece[_0x3a2b24(0x230)][_0x3a2b24(0x1fd)];if(!_0x350c5b)return _0x5f0fc5[_0x3a2b24(0x229)](0x190)[_0x3a2b24(0x20d)]({'error':_0x3a2b24(0x22f)});const _0x2297dc=await chat(_0x350c5b);_0x5f0fc5[_0x3a2b24(0x229)](0xc8)['json']({'status':0xc8,'creator':_0x3a2b24(0x212),'data':{'response':_0x2297dc}});}catch(_0x23466d){_0x5f0fc5[_0x3a2b24(0x229)](0x1f4)[_0x3a2b24(0x20d)]({'error':_0x23466d[_0x3a2b24(0x1e4)]});}}),app['get'](_0x44d677(0x1dc),async(_0x4b52f4,_0xf52413)=>{const _0x20391f=_0x44d677;try{const _0x589748=_0x4b52f4[_0x20391f(0x230)]['message'];if(!_0x589748)return _0xf52413[_0x20391f(0x229)](0x190)[_0x20391f(0x20d)]({'error':_0x20391f(0x22f)});const _0x1b9fe3=await aigpt(_0x589748);_0xf52413[_0x20391f(0x229)](0xc8)[_0x20391f(0x20d)]({'status':0xc8,'creator':_0x20391f(0x212),'data':{'response':_0x1b9fe3}});}catch(_0x1878f8){_0xf52413[_0x20391f(0x229)](0x1f4)[_0x20391f(0x20d)]({'error':_0x1878f8[_0x20391f(0x1e4)]});}}),app['get']('/api/downloader/fbdl',async(_0x1bbfce,_0x4fba68)=>{const _0x4ed39d=_0x44d677;try{const _0x3694b3=_0x1bbfce[_0x4ed39d(0x230)][_0x4ed39d(0x243)];if(!_0x3694b3)return _0x4fba68[_0x4ed39d(0x229)](0x190)[_0x4ed39d(0x20d)]({'error':'Parameter\x20\x22url\x22\x20tidak\x20ditemukan'});const _0x2d9506=await skrep[_0x4ed39d(0x1f3)](_0x3694b3);_0x4fba68[_0x4ed39d(0x229)](0xc8)[_0x4ed39d(0x20d)]({'status':0xc8,'creator':_0x4ed39d(0x212),'result':_0x2d9506});}catch(_0x43fcc6){_0x4fba68['status'](0x1f4)[_0x4ed39d(0x20d)]({'error':_0x43fcc6['result']});}}),app[_0x44d677(0x1fb)]('/api/downloader/igdl',async(_0x526063,_0x2d677a)=>{const _0x5a5b49=_0x44d677;try{const _0x390dbe=_0x526063[_0x5a5b49(0x230)][_0x5a5b49(0x243)];if(!_0x390dbe)return _0x2d677a[_0x5a5b49(0x229)](0x190)[_0x5a5b49(0x20d)]({'error':_0x5a5b49(0x24c)});var _0x3c708a=await skrep[_0x5a5b49(0x20b)](_0x390dbe)[_0x5a5b49(0x1da)](async _0x229682=>await skrep['instagramdlv2'](_0x390dbe))['catch'](async _0x37da57=>await skrep[_0x5a5b49(0x20c)](_0x390dbe))['catch'](async _0x2b99c6=>await skrep[_0x5a5b49(0x232)](_0x390dbe));const _0x32c8fe=_0x3c708a;_0x2d677a[_0x5a5b49(0x229)](0xc8)['json']({'status':0xc8,'creator':'MannR','result':_0x32c8fe});}catch(_0x533998){_0x2d677a[_0x5a5b49(0x229)](0x1f4)[_0x5a5b49(0x20d)]({'error':_0x533998['result']});}}),app[_0x44d677(0x1fb)](_0x44d677(0x233),async(_0x4be5ef,_0x375134)=>{const _0x1b2f4d=_0x44d677;try{const _0x10eb35=_0x4be5ef[_0x1b2f4d(0x230)][_0x1b2f4d(0x243)];if(!_0x10eb35)return _0x375134[_0x1b2f4d(0x229)](0x190)[_0x1b2f4d(0x20d)]({'error':'Parameter\x20\x22url\x22\x20tidak\x20ditemukan'});var _0x10ad9c=await tiktok(_0x10eb35);const _0x34900b=_0x10ad9c;_0x375134[_0x1b2f4d(0x229)](0xc8)[_0x1b2f4d(0x20d)]({'status':0xc8,'creator':_0x1b2f4d(0x212),'result':_0x34900b});}catch(_0x17fd1f){_0x375134[_0x1b2f4d(0x229)](0x1f4)['json']({'error':_0x17fd1f[_0x1b2f4d(0x1e4)]});}}),app['get'](_0x44d677(0x244),async(_0x4dd2c5,_0x2febf6)=>{const _0x292a5b=_0x44d677;try{const _0x42832c=_0x4dd2c5[_0x292a5b(0x230)][_0x292a5b(0x243)];if(!_0x42832c)return _0x2febf6[_0x292a5b(0x229)](0x190)[_0x292a5b(0x20d)]({'error':'Parameter\x20\x22url\x22\x20tidak\x20ditemukan'});var _0x29677e=await tiktokv2(_0x42832c);const _0x51f9eb=_0x29677e;_0x2febf6[_0x292a5b(0x229)](0xc8)[_0x292a5b(0x20d)]({'status':0xc8,'creator':'MannR','result':_0x51f9eb});}catch(_0x3fe1ce){_0x2febf6[_0x292a5b(0x229)](0x1f4)['json']({'error':_0x3fe1ce[_0x292a5b(0x1e4)]});}}),app['get']('/api/downloader/mediafire',async(_0x4a4c62,_0x132d18)=>{const _0x302528=_0x44d677;try{const _0x2e24f9=_0x4a4c62['query']['url'];if(!_0x2e24f9)return _0x132d18[_0x302528(0x229)](0x190)['json']({'error':'Parameter\x20\x22url\x22\x20tidak\x20ditemukan'});var _0x2b3ef4=await mediafire(_0x2e24f9);const _0x409ef0=_0x2b3ef4;_0x132d18[_0x302528(0x229)](0xc8)['json']({'status':0xc8,'creator':_0x302528(0x212),'result':_0x409ef0});}catch(_0x5c7cbb){_0x132d18['status'](0x1f4)[_0x302528(0x20d)]({'error':_0x5c7cbb[_0x302528(0x1e4)]});}}),app[_0x44d677(0x1fb)](_0x44d677(0x24a),async(_0x9714f7,_0x349c85)=>{const _0x18edaa=_0x44d677;try{const _0x3c931d=await livecharttba(),_0xfbc038=_0x3c931d[_0x18edaa(0x216)](_0x44b2c5=>{const _0x367059=_0x18edaa;return{'title':_0x44b2c5[_0x367059(0x206)],'tags':_0x44b2c5[_0x367059(0x240)][_0x367059(0x250)](',\x20'),'image':_0x44b2c5['image'],'studio':_0x44b2c5['studio'],'adaptation':_0x44b2c5[_0x367059(0x218)],'release_date':_0x44b2c5[_0x367059(0x217)]};});_0x349c85[_0x18edaa(0x229)](0xc8)[_0x18edaa(0x20d)]({'status':0xc8,'creator':_0x18edaa(0x212),'result':_0xfbc038});}catch(_0x1cba7f){_0x349c85[_0x18edaa(0x229)](0x1f4)['json']({'error':_0x1cba7f[_0x18edaa(0x1e4)]});}}),app[_0x44d677(0x1fb)](_0x44d677(0x252),async(_0x5670cb,_0x18624b)=>{const _0x3659a3=_0x44d677;try{let _0x8f9d65=await axios[_0x3659a3(0x1fb)](_0x3659a3(0x20e)),_0x121cef=_0x8f9d65[_0x3659a3(0x236)],_0x49b45e=_0x121cef[Math[_0x3659a3(0x220)](_0x121cef['length']*Math[_0x3659a3(0x23f)]())];_0x18624b['status'](0xc8)[_0x3659a3(0x20d)]({'status':0xc8,'creator':'MannR','result':_0x49b45e});}catch(_0x5b001b){_0x18624b['status'](0x1f4)[_0x3659a3(0x20d)]({'error':_0x5b001b[_0x3659a3(0x1e4)]});}}),app[_0x44d677(0x1fb)](_0x44d677(0x253),async(_0x536d64,_0x2c00d1)=>{const _0x1ac709=_0x44d677;try{let _0xfc898a=await axios[_0x1ac709(0x1fb)](_0x1ac709(0x1fa)),_0x3836b2=_0xfc898a[_0x1ac709(0x236)],_0x4ca9e8=_0x3836b2[Math['floor'](_0x3836b2[_0x1ac709(0x239)]*Math[_0x1ac709(0x23f)]())];_0x2c00d1[_0x1ac709(0x229)](0xc8)[_0x1ac709(0x20d)]({'status':0xc8,'creator':_0x1ac709(0x212),'result':_0x4ca9e8});}catch(_0x364dd5){_0x2c00d1['status'](0x1f4)[_0x1ac709(0x20d)]({'error':_0x364dd5[_0x1ac709(0x1e4)]});}}),app[_0x44d677(0x1fb)](_0x44d677(0x1e5),async(_0x4f39cc,_0x3344b3)=>{const _0x3bae55=_0x44d677;try{const _0xe96930=_0x4f39cc['query'][_0x3bae55(0x1fd)];if(!_0xe96930)return _0x3344b3[_0x3bae55(0x229)](0x190)['json']({'error':_0x3bae55(0x22f)});let _0x767f63=_0x3bae55(0x248)+encodeURIComponent(_0xe96930),_0x2b8098=await googleIt({'query':_0xe96930});const _0x2df027=_0x2b8098[_0x3bae55(0x216)](_0x4ff335=>{const _0x302305=_0x3bae55;return{'title':_0x4ff335['title'],'url':_0x4ff335[_0x302305(0x22a)],'snippet':_0x4ff335[_0x302305(0x24b)]};});_0x3344b3[_0x3bae55(0x229)](0xc8)[_0x3bae55(0x20d)]({'status':0xc8,'creator':_0x3bae55(0x212),'result':_0x2df027});}catch(_0x3b9fda){_0x3344b3[_0x3bae55(0x229)](0x1f4)[_0x3bae55(0x20d)]({'error':_0x3b9fda['result']});}}),app[_0x44d677(0x242)]((_0x19a37d,_0x518e25,_0x597a63)=>{const _0x1e29d6=_0x44d677;_0x518e25[_0x1e29d6(0x229)](0x194)[_0x1e29d6(0x208)](_0x1e29d6(0x1f2));}),app['use']((_0x45c14d,_0x39f094,_0x431596,_0x5e74d2)=>{const _0x4f7852=_0x44d677;console['error'](_0x45c14d[_0x4f7852(0x259)]),_0x431596[_0x4f7852(0x229)](0x1f4)[_0x4f7852(0x208)](_0x4f7852(0x225));}),app[_0x44d677(0x25f)](PORT,()=>{const _0x401a37=_0x44d677;console[_0x401a37(0x256)]('Server\x20is\x20running\x20on\x20port\x20'+PORT);}),module[_0x44d677(0x204)]=app;
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const axios = require('axios');
+const fetch = require('node-fetch');
+const cheerio = require('cheerio');
+const fs = require('fs');
+const googleIt = require('google-it');
+const { G4F } = require("g4f");
+let g4f = new G4F();
+const skrep = require('@bochilteam/scraper');
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.enable("trust proxy");
+app.set("json spaces", 2);
+
+// Middleware untuk CORS
+app.use(cors());
+
+// Fungsi untuk ragBot
+async function ragBot(message) {
+  try {
+    const response = await axios.post('https://ragbot-starter.vercel.app/api/chat', {
+      messages: [{ role: 'user', content: message }],
+      useRag: true,
+      llm: 'gpt-3.5-turbo',
+      similarityMetric: 'cosine'
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk degreeGuru
+async function degreeGuru(message, prompt) {
+  try {
+    const response = await axios.post('https://degreeguru.vercel.app/api/guru', {
+      messages: [
+        { role: 'user', content: message }
+      ]
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk pinecone
+async function pinecone(message) {
+  try {
+    const response = await axios.post('https://pinecone-vercel-example.vercel.app/api/chat', {
+      messages: [{ role: 'user', content: message }]
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk smartContract
+async function smartContract(message) {
+  try {
+    const response = await axios.post("https://smart-contract-gpt.vercel.app/api/chat", {
+      messages: [{ content: message, role: "user" }]
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk blackboxAIChat
+async function blackboxAIChat(content) {
+    const url = "https://www.blackbox.ai/api/chat"
+    const headers = {
+        "Accept": "*/*",
+        "Accept-Language": "id-ID,en;q=0.5",
+        "Referer": "https://www.blackbox.ai/",
+        "Content-Type": "application/json",
+        "Origin": "https://www.blackbox.ai",
+        "Alt-Used": "www.blackbox.ai"
+    }
+
+    const data = {
+        messages: [{
+            role: "user",
+            content
+        }],
+        id: "chat-free",
+        previewToken: null,
+        userId: "",
+        codeModelMode: true,
+        agentMode: {},
+        trendingAgentMode: {},
+        isMicMode: false,
+        userSystemPrompt: "You are Dark Box, a useful AI Model for millions of developers using Blackbox Code Chat that will answer coding questions and help them when writing code.",
+        maxTokens: 1024,
+        webSearchMode: false,
+        promptUrls: "",
+        isChromeExt: false,
+        githubToken: null
+    }
+
+    try {
+        const blackboxResponse = await fetch(url, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(data)
+        })
+
+        const blackboxData = await blackboxResponse.text()
+        return blackboxData
+    } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk GPT4
+async function chat(prompt) {
+	try {
+  const messages = [
+    { role: "asistant", content: "Kobo Kanaeru adalah bot WhatsApp yang terbuat dari Nodejs. Untuk membantu anda dalam mengerjakan dalam hal apapun. Karakter Kobonaeru adalah periang dan asik, Kobo Kanaeru diciptakan oleh MannHost atau Hyugimura, usia pencipta Kobo Kanaeru adalah 16tahun, dan pencipta Kobo Kanaeru tinggal di Kota Pekanbaru" },
+    { role: "user", content: prompt }
+  ];
+  let res = await g4f.chatCompletion(messages)
+  return  res
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Fungsi untuk AIGPT
+async function aigpt(prompt) {
+  try {
+   const response = await axios.get("https://tools.revesery.com/ai/ai.php?query=" + prompt, {
+     headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.9999.999 Safari/537.36'
+      }
+    });
+    const res = response.data
+    const result = res.result
+    return result
+  } catch (error) {
+  console.error(error)
+  }
+}
+
+// Fungsi untuk ttdl
+async function tiktok(url) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let t = await axios("https://lovetik.com/api/ajax/search", { method: "post", data: new URLSearchParams(Object.entries({ query: url })) });
+
+      const result = {};
+      result.title = clean(t.data.desc);
+      result.author = clean(t.data.author);
+      result.nowm = await shortener((t.data.links[0].a || "").replace("https", "http"));
+      result.watermark = await shortener((t.data.links[1].a || "").replace("https", "http"));
+      result.audio = await shortener((t.data.links[2].a || "").replace("https", "http"));
+      result.thumbnail = await shortener(t.data.cover);
+      
+      resolve(result);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+// Fungsi untuk ttdl2
+async function tiktokv2(url) {
+    const urls = { url };
+    try {
+        const response = await axios.post('https://ssstiktokio.com/wp-json/aio-dl/video-data/', urls, {
+            headers: {
+                Accept: '*/*',
+                'Content-Type': 'application/json',
+                'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36',
+            }
+        });
+        const data = response.data;
+        const result = {
+            data: data,
+        };
+
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.error(error);
+        return error.message;
+    }
+}
+
+// Funsi untuk mediafire
+async function mediafire(url) {
+	let res = await axios.get(url)
+	let get = cheerio.load(res.data)
+	let urlFile = get('a#downloadButton').attr('href')
+	let sizeFile = get('a#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('', '')
+	let split = urlFile.split('/')
+	let nameFile = split[5]
+	mime = nameFile.split('.')
+	mime = mime[1]
+	let result = {
+		title: nameFile,
+		size: sizeFile,
+		url: urlFile
+	}
+	return result
+}
+
+// Fungsi untuk ongoing
+async function livecharttba() {
+	try {
+    let { data } = await axios.get('https://www.livechart.me/tba/tv');
+    const $ = cheerio.load(data);
+    const Result = [];
+    $('#content > main > article:nth-child(n)').each((i, e) => {
+        const judul = $(e).find('div > h3 > a').text();
+        const image = $(e).find('div > div.poster-container > img').attr('src');
+        const studio = $(e).find('div > div.anime-info > ul > li > a').text();
+        const adaptasi = 'Di adaptasi dari ' + $(e).find('div > div.anime-info > div.anime-metadata > div.anime-source').text();
+        const rilisDate = $(e).find('div > div.poster-container > time').text();
+        const tags = [];
+        $(e).find('div > ol > li:nth-child(n)').each((i, b) => {
+            const a = $(b).find('a').text();
+            tags.push(a);
+        });
+        const linkInfo = $(e).find('div > ul > li:nth-child(2) > a').attr('href');
+        Result.push({
+            judul,
+            tags,
+            image,
+            studio,
+            adaptasi,
+            rilisDate,
+        });
+    });
+    return Result;
+    } catch (error) {
+    throw error;
+  }
+}
+
+// Endpoint untuk servis dokumen HTML
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Endpoint untuk ragBot
+app.get('/api/ai/ragbot', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await ragBot(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk degreeGuru
+app.get('/api/ai/degreeguru', async (req, res) => {
+  try {
+    const { message }= req.query;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await degreeGuru(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk pinecone
+app.get('/api/ai/pinecone', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await pinecone(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk smartContract
+app.get('/api/ai/smartcontract', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await smartContract(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk blackboxAIChat
+app.get('/api/ai/blackboxAIChat', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await blackboxAIChat(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk gpt4
+app.get('/api/ai/gpt4', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await chat(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk aigpt
+app.get('/api/ai/aigpt', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await aigpt(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk fbdl
+app.get('/api/downloader/fbdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const result = await skrep.savefrom(url);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk igdl
+app.get('/api/downloader/igdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var dld = await skrep.instagramdl(url).catch(async _ => await skrep.instagramdlv2(url)).catch(async _ => await skrep.instagramdlv3(url)).catch(async _ => await skrep.instagramdlv4(url))
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ttdl
+app.get('/api/downloader/ttdl', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var dld = await tiktok(url)
+    const result = dld;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ttdlv2
+app.get('/api/downloader/ttdlv2', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var anu = await tiktokv2(url)
+    const result = anu;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk mediafire
+app.get('/api/downloader/mediafire', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    var anu = await mediafire(url)
+    const result = anu;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk ongoing
+app.get('/api/anime/ongoing', async (req, res) => {
+  try {
+    const mannr = await livecharttba();
+    const result = mannr.map(item => {
+        return { title: item.judul,
+tags: item.tags.join(', '),
+image: item.image,
+studio: item.studio,
+adaptation: item.adaptasi,
+release_date: item.rilisDate }
+    });
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk cosplay
+app.get('/api/anime/cosplay', async (req, res) => {
+  try {
+  	let ano = await axios.get("https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-cosplay.json")
+  	let list = ano.data
+  	let result = list[Math.floor(list.length * Math.random())]
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk elaina
+app.get('/api/anime/elaina', async (req, res) => {
+  try {
+  	let ano = await axios.get("https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-elaina.json")
+  	let list = ano.data
+  	let result = list[Math.floor(list.length * Math.random())]
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk google
+app.get('/api/internet/google', async (req, res) => {
+  try {
+  const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+  let url = 'https://google.com/search?q=' + encodeURIComponent(message)
+  let search = await googleIt({ query: message })
+  const result = search.map(item => {
+        return { title: item.title,
+url: item.link,
+snippet: item.snippet }
+    });
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Handle 404 error
+app.use((req, res, next) => {
+  res.status(404).send("Sorry can't find that!");
+});
+
+// Handle error
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+// Jalankan server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+module.exports = app
