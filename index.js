@@ -2,8 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const axios = require('axios');
+const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const googleIt = require('google-it');
 const { G4F } = require("g4f");
 let g4f = new G4F();
 const skrep = require('@bochilteam/scraper');
@@ -483,6 +485,30 @@ app.get('/api/anime/elaina', async (req, res) => {
   	let ano = await axios.get("https://raw.githubusercontent.com/MannOffc/api/main/JSON/manaxu-elaina.json")
   	let list = ano.data
   	let result = list[Math.floor(list.length * Math.random())]
+  	res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk google
+app.get('/api/internet/google', async (req, res) => {
+  try {
+  const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+  let url = 'https://google.com/search?q=' + encodeURIComponent(message)
+  let search = await googleIt({ query: message })
+  const result = search.map(item => {
+        return { title: item.title,
+url: item.link,
+snippet: item.snippet }
+    });
   	res.status(200).json({
       status: 200,
       creator: "MannR",
