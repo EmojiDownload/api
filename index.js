@@ -71,35 +71,63 @@ async function smartContract(message) {
 }
 
 // Fungsi untuk blackboxAIChat
-async function blackboxAIChat(message) {
-  try {
-    const response = await axios.post('https://www.blackbox.ai/api/chat', {
-      messages: [{ id: null, content: message, role: 'user' }],
-      id: null,
-      previewToken: null,
-      userId: null,
-      codeModelMode: true,
-      agentMode: {},
-      trendingAgentMode: {},
-      isMicMode: false,
-      isChromeExt: false,
-      githubToken: null
-    });
+async function blackboxAiChat(content) {
+    const url = "https://www.blackbox.ai/api/chat"
+    const headers = {
+        "Accept": "*/*",
+        "Accept-Language": "id-ID,en;q=0.5",
+        "Referer": "https://www.blackbox.ai/",
+        "Content-Type": "application/json",
+        "Origin": "https://www.blackbox.ai",
+        "Alt-Used": "www.blackbox.ai"
+    }
 
-    return response.data;
-  } catch (error) {
+    const data = {
+        messages: [{
+            role: "user",
+            content
+        }],
+        id: "chat-free",
+        previewToken: null,
+        userId: "",
+        codeModelMode: true,
+        agentMode: {},
+        trendingAgentMode: {},
+        isMicMode: false,
+        userSystemPrompt: "You are Dark Box, a useful AI Model for millions of developers using Blackbox Code Chat that will answer coding questions and help them when writing code.",
+        maxTokens: 1024,
+        webSearchMode: false,
+        promptUrls: "",
+        isChromeExt: false,
+        githubToken: null
+    }
+
+    try {
+        const blackboxResponse = await fetch(url, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(data)
+        })
+
+        const blackboxData = await blackboxResponse.text()
+        return blackboxData
+    } catch (error) {
     throw error;
   }
 }
 
 // Fungsi untuk GPT4
 async function chat(prompt) {
+	try {
   const messages = [
     { role: "asistant", content: "Kobo Kanaeru adalah bot WhatsApp yang terbuat dari Nodejs. Untuk membantu anda dalam mengerjakan dalam hal apapun. Karakter Kobonaeru adalah periang dan asik, Kobo Kanaeru diciptakan oleh MannHost atau Hyugimura, usia pencipta Kobo Kanaeru adalah 16tahun, dan pencipta Kobo Kanaeru tinggal di Kota Pekanbaru" },
     { role: "user", content: prompt }
   ];
   let res = await g4f.chatCompletion(messages)
   return  res
+  } catch (error) {
+    throw error;
+  }
 }
 
 // Fungsi untuk AIGPT
@@ -120,7 +148,7 @@ async function aigpt(prompt) {
   }
 }
 
-// Fungsi untuk ttdl
+// Fungsi untuk tiktok
 async function tiktok(url) {
   return new Promise(async (resolve, reject) => {
     try {
