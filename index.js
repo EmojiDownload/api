@@ -180,7 +180,10 @@ async function tiktokv2(url) {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36',
             }
         });
-        const result = response.data
+        const data = response.data;
+        const result = {
+            data: data,
+        };
 
         console.log(result);
         return result;
@@ -243,6 +246,9 @@ async function livecharttba() {
 
 // Endpoint untuk servis dokumen HTML
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'home.html'));
+});
+app.get('/api', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
@@ -416,7 +422,8 @@ app.get('/api/downloader/ttdl', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    const result = await tiktok(url)
+    var dld = await tiktok(url)
+    const result = dld;
     res.status(200).json({
       status: 200,
       creator: "MannR",
@@ -434,7 +441,8 @@ app.get('/api/downloader/ttdlv2', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    const result = await tiktokv2(url)
+    var anu = await tiktokv2(url)
+    const result = anu;
     res.status(200).json({
       status: 200,
       creator: "MannR",
