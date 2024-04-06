@@ -116,6 +116,52 @@ async function blackboxAIChat(content) {
   }
 }
 
+// Fungsi untuk blackboxAIChat
+async function blackboxAIChat2(content) {
+    const url = "https://www.blackbox.ai/api/chat"
+    const headers = {
+        "Accept": "*/*",
+        "Accept-Language": "id-ID,en;q=0.5",
+        "Referer": "https://www.blackbox.ai/",
+        "Content-Type": "application/json",
+        "Origin": "https://www.blackbox.ai",
+        "Alt-Used": "www.blackbox.ai"
+    }
+
+    const data = {
+        messages: [{
+            role: "user",
+            content
+        }],
+        id: "chat-free",
+        previewToken: null,
+        userId: "",
+        codeModelMode: true,
+        agentMode: {},
+        trendingAgentMode: {},
+        isMicMode: false,
+        userSystemPrompt: "Kamu adalah asisten bot whatsapp dan nama kamu adalah Chiwa, pencipta kamu adalah Salman, pencipta kamu tinggal di kota Pekanbaru, kamu memiliki sifat yang asik, dan menggunakan bahasa indonesia yang gaul, terkadang kamu sangat romantis.",
+        maxTokens: 1024,
+        webSearchMode: false,
+        promptUrls: "",
+        isChromeExt: false,
+        githubToken: null
+    }
+
+    try {
+        const blackboxResponse = await fetch(url, {
+            method: "POST",
+            headers,
+            body: JSON.stringify(data)
+        })
+
+        const blackboxData = await blackboxResponse.text()
+        return blackboxData
+    } catch (error) {
+    throw error;
+  }
+}
+
 // Fungsi untuk GPT4
 async function chat(prompt) {
 	try {
@@ -332,6 +378,24 @@ app.get('/api/ai/blackboxAIChat', async (req, res) => {
       return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
     }
     const response = await blackboxAIChat(message);
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Endpoint untuk blackboxAIChat2
+app.get('/api/ai/hyugimura', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await blackboxAIChat2(message);
     res.status(200).json({
       status: 200,
       creator: "MannR",
