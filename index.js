@@ -194,6 +194,42 @@ async function aigpt(prompt) {
   }
 }
 
+// Fungsi untuk image img2prompt
+async function img2prompt(url) {
+    try {
+        const fetch = await import('node-fetch');
+        const response = await fetch.default(url);
+        const imageData = await response.buffer();
+        const imageBase64 = Buffer.from(imageData).toString('base64');
+
+        const payload = {
+            "consume_points": 1,
+            "image": imageBase64
+        };
+
+        const headers = {
+            'Content-Type': 'application/json',
+            'Cookie': '_ga=GA1.1.1902043976.1711876868; _ga_WQ0WB7ZY96=GS1.1.1711876868.1.1.1711877146.0.0.0',
+            'Origin': 'https://animegenius.live3d.io',
+            'Referer': 'https://animegenius.live3d.io/',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTI5MTQyMTIsInN1YiI6Imdvb2dsZSAxNjEzMTIzIGdlbnR1cnN5MDJAZ21haWwuY29tIn0.niSNoUYnECi7nKdY9BObDHAt_EX-FsLcdhxfoUCWbbs',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
+        };
+
+        const result = await fetch.default('https://api.live3d.io/api/v1/generation/img2prompt', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(payload)
+        });
+
+        const responseData = await result.json();
+        return responseData;
+
+    } catch (error) {
+  console.error(error)
+  }
+}
+
 // Fungsi untuk ttdl
 async function tiktok(url) {
   return new Promise(async (resolve, reject) => {
@@ -436,6 +472,24 @@ app.get('/api/ai/aigpt', async (req, res) => {
       status: 200,
       creator: "MannR",
       data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.result });
+  }
+});
+
+// Endpoint untuk img2prompt
+app.get('/api/ai/img2prompt', async (req, res) => {
+  try {
+    const url = req.query.url;
+    if (!url) {
+      return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
+    }
+    const result = await img2prompt(url).data;
+    res.status(200).json({
+      status: 200,
+      creator: "MannR",
+      result
     });
   } catch (error) {
     res.status(500).json({ error: error.result });
