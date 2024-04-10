@@ -485,7 +485,8 @@ app.get('/api/ai/img2prompt', async (req, res) => {
     if (!url) {
       return res.status(400).json({ error: 'Parameter "url" tidak ditemukan' });
     }
-    const result = await img2prompt(url).data;
+    const ano = await img2prompt(url);
+    const result = ano.data;
     res.status(200).json({
       status: 200,
       creator: "MannR",
